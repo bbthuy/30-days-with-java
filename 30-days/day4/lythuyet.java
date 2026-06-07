@@ -21,12 +21,12 @@ public class LyThuyet{
         // Khai báo field là private → bên ngoài không được sửa trực tiếp. 
         // Muốn truy cập phải qua method. Nhờ đó class kiểm soát được logic validation.
         public void setAge(int Age){
-            if(age > 0) this.age = age
+            if(age > 0) this.age = age;
         }
 
         // Getter & Setter — cổng ra vào có kiểm soát
         // Getter trả về giá trị. Setter nhận và kiểm tra trước khi gán. 
-        public String getName(String name){
+        public String getName(){
             return name;
         }
         public void setName (String name){
