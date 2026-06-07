@@ -4,8 +4,7 @@ public class LyThuyet{
     static class Student{
         // fields
         String name;
-        int age;
-
+        private int age; // bên ngoài không đọc/ghi dữ liệu được
         // method
         void ThongTinSV(){
             System.out.println("Sinh vien: " + name + "\n" + "Tuoi: "  + age);
@@ -17,6 +16,23 @@ public class LyThuyet{
             this.name = name;
             this.age = age;
         }
+
+        // Encapsulation — đóng gói, bảo vệ dữ liệu
+        // Khai báo field là private → bên ngoài không được sửa trực tiếp. 
+        // Muốn truy cập phải qua method. Nhờ đó class kiểm soát được logic validation.
+        public void setAge(int Age){
+            if(age > 0) this.age = age
+        }
+
+        // Getter & Setter — cổng ra vào có kiểm soát
+        // Getter trả về giá trị. Setter nhận và kiểm tra trước khi gán. 
+        public String getName(String name){
+            return name;
+        }
+        public void setName (String name){
+            if (name != null & !name.isEmpty()) this.name = name;
+        }
+
     }
     // Tạo 2 object độc lập
     public static void main (String[] args){
